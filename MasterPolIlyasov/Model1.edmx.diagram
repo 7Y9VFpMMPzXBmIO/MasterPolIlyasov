@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6eb9d1044edc4a8db6283fc664f28c3a" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Material" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Material_Type" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.MaterialCountHistory" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Partner" Width="1.5" PointX="8.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Partner_Product" Width="1.5" PointX="10.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Partner_type" Width="1.5" PointX="6" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.PartnerSaleHistory" Width="1.5" PointX="10.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.PointSale" Width="1.5" PointX="10.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Product" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.ProductCountHistory" Width="1.5" PointX="10.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.ProductMinCostHistory" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.ProductType" Width="1.5" PointX="6" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Role" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Supllier" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IlyasovmasterpolModel.Suplly" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Employee_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Partner_Product_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Suplly_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Material_Material_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_MaterialCountHistory_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Suplly_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Partner_Partner_type" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Partner_Product_Partner" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_PartnerSaleHistory_Partner" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Partner_Product_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Product_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_ProductCostHistory_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_ProductCountHistory_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.FK_Suplly_Supllier" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.MaterialProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="IlyasovmasterpolModel.PartnerPointSale" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
