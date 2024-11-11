@@ -11,7 +11,8 @@ namespace MasterPolIlyasov
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Partner
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -46,11 +47,64 @@ namespace MasterPolIlyasov
         public virtual ICollection<PartnerSaleHistory> PartnerSaleHistory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PointSale> PointSale { get; set; }
-        public string PType
+        public string PartnerTypeString
         {
             get
             {
                 return Partner_type1.Type_name;
+            }
+        }
+
+        private int PartnerDiscount
+        {
+            get
+            {
+
+                if (IlyasovmasterpolEntities.GetContext().Partner_Product.Where(p => p.Partner == ID_Partner).Count() > 0)
+                {
+                    var PartnerProdQuantity = IlyasovmasterpolEntities.GetContext().Partner_Product.Where(p => p.Partner == ID_Partner).Sum(p => p.QuantityProduction);
+                    Console.WriteLine(PartnerProdQuantity);
+                    if (PartnerProdQuantity >= 10000 && PartnerProdQuantity < 50000)
+                    {
+                        return 5;
+                    }
+                    else if (PartnerProdQuantity >= 50000 && PartnerProdQuantity < 300000)
+                    {
+                        return 10;
+                    }
+                    else if (PartnerProdQuantity >= 300000)
+                    {
+                        return 15;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                else
+                {
+                    return -1;
+                }
+
+            }
+        }
+
+        public string PartnerDiscountDisplay
+        {
+            get
+            {
+                if (PartnerDiscount == 0)
+                {
+                    return "Нет скидки";
+                }
+                else if (PartnerDiscount == -1)
+                {
+                    return "Нет продаж";
+                }
+                else
+                {
+                    return PartnerDiscount.ToString() + "%";
+                }
             }
         }
     }

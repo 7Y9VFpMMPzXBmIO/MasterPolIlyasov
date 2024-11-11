@@ -19,19 +19,13 @@ namespace MasterPolIlyasov
             : base("name=IlyasovmasterpolEntities")
         {
         }
-
         private static IlyasovmasterpolEntities _context;
-
-        public static IlyasovmasterpolEntities GetContex()
+        public static IlyasovmasterpolEntities GetContext()
         {
-            if(_context == null)
-            {
+            if (_context == null)
                 _context = new IlyasovmasterpolEntities();
-            }
-
             return _context;
         }
-    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

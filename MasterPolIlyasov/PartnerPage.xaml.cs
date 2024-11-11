@@ -24,10 +24,27 @@ namespace MasterPolIlyasov
         {
             InitializeComponent();
 
-            List<Partner> currentPartners = IlyasovmasterpolEntities.GetContex().Partner.ToList();
+            List<Partner> currentPartners = IlyasovmasterpolEntities.GetContext().Partner.ToList();
 
-            PartnerListView.ItemsSource = currentPartners;
+            PartnersListView.ItemsSource = currentPartners;
 
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            var currentPartner = IlyasovmasterpolEntities.GetContext().Partner.ToList();
+            PartnersListView.ItemsSource = currentPartner;
+        }
+
+        private void AddPartnerBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddPartnerPage(null));
+        }
+
+        private void EditPartnerBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddPartnerPage((sender as Button).DataContext as Partner));
         }
     }
 }
+
