@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterPolIlyasov", "MasterPolIlyasov\MasterPolIlyasov.csproj", "{48D00B10-F095-468D-984C-45F0A6CD8E98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{CFD5AD6D-D974-4135-B569-AAA3B098D89E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{48D00B10-F095-468D-984C-45F0A6CD8E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48D00B10-F095-468D-984C-45F0A6CD8E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48D00B10-F095-468D-984C-45F0A6CD8E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD5AD6D-D974-4135-B569-AAA3B098D89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD5AD6D-D974-4135-B569-AAA3B098D89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD5AD6D-D974-4135-B569-AAA3B098D89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD5AD6D-D974-4135-B569-AAA3B098D89E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
